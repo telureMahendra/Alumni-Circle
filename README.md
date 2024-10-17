@@ -153,7 +153,7 @@ The platform uses MySQL for its relational database, with tables representing en
 5. **Connecting Frontend and Backend: Ensure the API base URL in the frontend matches the running backend**:
    - Open `frontend/.env`
    - Set the backend API URL
-     ```code
+     ```bash
      REACT_APP_API_URL=http://localhost:8080
 
 ## Contributing
@@ -172,7 +172,7 @@ The platform uses MySQL for its relational database, with tables representing en
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
-    ```code
+    ```bash
     You can copy-paste this code into your `README.md` file for your project. This provides a comprehensive description, setup guide, and project structure along with instructions for contributing.```
 
 
