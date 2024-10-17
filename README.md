@@ -117,7 +117,6 @@ The platform uses MySQL for its relational database, with tables representing en
 
 
 ## Project Structure
-    ```plaintext
     alumni-circle/
     ├── frontend/
     │   ├── public/
