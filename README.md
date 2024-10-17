@@ -92,10 +92,11 @@ The platform uses MySQL for its relational database, with tables representing en
     npm install
     npm start
   Access the frontend at `http://localhost:3000`.
+  
 3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
     ```bash
     cd backend
-    mvn spring-boot:run
+    mvn spring-boot:run```
   The backend will run on `http://localhost:8080`.
   
 4. **MySQL Setup**:
