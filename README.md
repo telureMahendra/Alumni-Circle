@@ -57,10 +57,44 @@ The platform uses MySQL for its relational database, with tables representing en
 
 ### Detailed Flowchart - Level 4
 
-![Dataflow Level 4](/resourcesDFD_level_4.png)
+![Dataflow Level 4](/resources/DFD_level_4.png)
 
 ## Setup Instructions
 
+### Running the Application
+
+### Steps
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/alumni-circle.git
+   cd alumni-circle
+2. **Frontend: Navigate to the frontend directory and install dependencies**:
+    ```bash
+    cd frontend
+    npm install
+    npm start
+  Access the frontend at `http://localhost:3000`.
+3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
+    ```bash
+    cd backend
+    mvn spring-boot:run
+  The backend will run on `http://localhost:8080`.
+  
+4. **MySQL Setup**:
+  - Create a new database.
+    ```bash
+    CREATE DATABASE alumni_circle;
+  - Ensure the backend connects to the correct MySQL database by configuring `application.properties` in the backend folder:
+    ```bash
+    spring.datasource.url=jdbc:mysql://localhost:3306/alumni_circle
+    spring.datasource.username=root
+    spring.datasource.password=yourpassword
+5. **Connecting Frontend and Backend: Ensure the API base URL in the frontend matches the running backend**:
+   - Open `frontend/.env`
+   - Set the backend API URL
+     ```bash
+     REACT_APP_API_URL=http://localhost:8080
 
 
 ## Project Structure
@@ -120,41 +154,6 @@ The platform uses MySQL for its relational database, with tables representing en
 - `GET /api/jobs`: Get available job listings.
 
 ## Usage
-
-### Running the Application
-
-### Steps
-
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/yourusername/alumni-circle.git
-   cd alumni-circle
-2. **Frontend: Navigate to the frontend directory and install dependencies**:
-    ```bash
-    cd frontend
-    npm install
-    npm start
-  Access the frontend at `http://localhost:3000`.
-3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
-    ```bash
-    cd backend
-    mvn spring-boot:run
-  The backend will run on `http://localhost:8080`.
-  
-4. **MySQL Setup**:
-  - Create a new database.
-    ```bash
-    CREATE DATABASE alumni_circle;
-  - Ensure the backend connects to the correct MySQL database by configuring `application.properties` in the backend folder:
-    ```bash
-    spring.datasource.url=jdbc:mysql://localhost:3306/alumni_circle
-    spring.datasource.username=root
-    spring.datasource.password=yourpassword
-5. **Connecting Frontend and Backend: Ensure the API base URL in the frontend matches the running backend**:
-   - Open `frontend/.env`
-   - Set the backend API URL
-     ```bash
-     REACT_APP_API_URL=http://localhost:8080
 
 ## Contributing
   If you'd like to contribute to this project, you can follow these steps:
