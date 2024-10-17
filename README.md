@@ -59,8 +59,30 @@ The platform uses MySQL for its relational database, with tables representing en
 
 ![Dataflow Level 4](./DFD_level_4.png)
 
-## Project Structure
+## Setup Instructions
 
+
+
+## Project Structure
+    ```plaintext
+    alumni-circle/
+    ├── frontend/
+    │   ├── public/
+    │   ├── src/
+    │   │   ├── components/
+    │   │   ├── pages/
+    │   │   ├── services/
+    │   ├── package.json
+    │   ├── .env
+    │   └── README.md
+    ├── backend/
+    │   ├── src/
+    │   │   ├── main/
+    │   │   ├── test/
+    │   ├── pom.xml
+    │   ├── application.properties
+    │   └── README.md
+    └── README.md
 
 ### Key Folders and Files:
 
@@ -101,18 +123,56 @@ The platform uses MySQL for its relational database, with tables representing en
 
 ### Running the Application
 
-1. **Frontend**:
+### Steps
 
+1. **Clone the repository**:
    ```bash
-   cd frontend
-   npm install
-   npm start
+   git clone https://github.com/yourusername/alumni-circle.git
+   cd alumni-circle
+2. **Frontend: Navigate to the frontend directory and install dependencies**:
+    ```bash
+    cd frontend
+    npm install
+    npm start
+  Access the frontend at `http://localhost:3000`.
+3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
+    ```bash
+    cd backend
+    mvn spring-boot:run
+  The backend will run on `http://localhost:8080`.
+  
+4. **MySQL Setup**:
+  - Create a new database.
+    ```bash
+    CREATE DATABASE alumni_circle;
+  - Ensure the backend connects to the correct MySQL database by configuring `application.properties` in the backend folder:
+    ```bash
+    spring.datasource.url=jdbc:mysql://localhost:3306/alumni_circle
+    spring.datasource.username=root
+    spring.datasource.password=yourpassword
+5. **Connecting Frontend and Backend: Ensure the API base URL in the frontend matches the running backend**:
+   - Open `frontend/.env`
+   - Set the backend API URL
+     ```code
+     REACT_APP_API_URL=http://localhost:8080
 
-### Additional Changes:
+## Contributing
+  If you'd like to contribute to this project, you can follow these steps:
+  1. Fork the repository.
+  2. Create a new feature branch:
+     ```bash
+     git checkout -b feature/new-feature
+  3. Make your changes and commit:
+     ```bash
+     git commit -m 'Add new feature'
+  4. Push to your branch:
+     ```bash
+     git push origin feature/new-feature
+  5. Open a pull request to merge your changes into the main branch.
 
-1. **Project Structure**: Describes the folder structure for both frontend and backend.
-2. **API Endpoints**: Provides a list of important API routes for interaction between frontend and backend.
-3. **Usage**: Instructions for running the application with frontend and backend servers.
-4. **License**: You can include a `LICENSE` file in the root directory of your project.
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+    ```code
+    You can copy-paste this code into your `README.md` file for your project. This provides a comprehensive description, setup guide, and project structure along with instructions for contributing.```
 
-Feel free to modify as per your specific requirements!
+
