@@ -84,18 +84,18 @@ The platform uses MySQL for its relational database, with tables representing en
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/alumni-circle.git
+   git clone https://github.com/telureMahendra/alumni-circle.git
    cd alumni-circle
 2. **Frontend: Navigate to the frontend directory and install dependencies**:
      ```bash
-     cd frontend
+     cd AlumniCircle-client
      npm install
      npm start
   Access the frontend at `http://localhost:3000`.
   
 3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
      ```bash
-     cd backend
+     cd AlumniCircle-server
      mvn spring-boot:run
     
   The backend will run on `http://localhost:8080`.
