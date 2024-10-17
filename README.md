@@ -87,18 +87,18 @@ The platform uses MySQL for its relational database, with tables representing en
    git clone https://github.com/yourusername/alumni-circle.git
    cd alumni-circle
 2. **Frontend: Navigate to the frontend directory and install dependencies**:
-        ```bash
-        cd frontend
-        npm install
-        npm start
-    Access the frontend at `http://localhost:3000`.
+     ```bash
+     cd frontend
+     npm install
+     npm start
+  Access the frontend at `http://localhost:3000`.
   
 3. **Backend: Navigate to the backend directory and run the Spring Boot application**:
-        ```bash
-        cd backend
-        mvn spring-boot:run
+     ```bash
+     cd backend
+     mvn spring-boot:run
     
-    The backend will run on `http://localhost:8080`.
+  The backend will run on `http://localhost:8080`.
   
 4. **MySQL Setup**:
   - Create a new database.
