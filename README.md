@@ -49,15 +49,15 @@ The platform uses MySQL for its relational database, with tables representing en
 
 ### Flowchart - Level 1
 
-![Flowchart Level 1](./DFD_level_1.png)
+![Flowchart Level 1](.resources/DFD_level_1.png)
 
 ### Dataflow Diagram - Level 2
 
-![Dataflow Level 2](./DFD_level_2.png)
+![Dataflow Level 2](.resources/DFD_level_2.png)
 
 ### Detailed Flowchart - Level 4
 
-![Dataflow Level 4](./DFD_level_4.png)
+![Dataflow Level 4](./resourcesDFD_level_4.png)
 
 ## Setup Instructions
 
