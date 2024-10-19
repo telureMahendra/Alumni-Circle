@@ -76,6 +76,7 @@ The platform uses MySQL for its relational database, with tables representing en
 ![Sequence](/resources/Sequence.png)
 
 
+
 ## Setup Instructions
 
 ### Running the Application
