@@ -2,6 +2,8 @@ package com.geca.alumniCircle.model;
 
 
 
+import javax.persistence.Column;
+
 import jakarta.persistence.*;
 
 
@@ -14,6 +16,7 @@ public class Job {
     private Long id; // Assuming you have an ID field
     
     private String title;
+    @Column(length = 5000)
     private String description;
     private String location;
     private String company;

@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
@@ -20,11 +21,29 @@ public class JobController {
     public List<Job> getAllJobs() {
         return jobService.getAllJobs();
     }
+    
+    @GetMapping("/{id}")
+    public Optional<Job> getJob(@PathVariable Long id) {
+        return jobService.getJob(id);
+    }
 
-    @PostMapping
+    @PostMapping("/post")
     public ResponseEntity<Job> createJob(@RequestBody Job job) {
         Job createdJob = jobService.createJob(job);
         return ResponseEntity.status(201).body(createdJob);
+    }
+    
+    @PutMapping("/update")
+    public ResponseEntity<Job> updateJob(@RequestBody Job job) {
+        Job createdJob = jobService.createJob(job);
+        return ResponseEntity.status(201).body(createdJob);
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public Optional<Job> deleteJob(@PathVariable Long id) {
+    	Optional<Job> job = jobService.getJob(id);
+    	jobService.deleteJob(id);
+		return job;
     }
 
     @GetMapping("/alumni/{alumniId}")

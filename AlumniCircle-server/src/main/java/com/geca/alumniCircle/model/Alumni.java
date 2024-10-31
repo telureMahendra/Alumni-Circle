@@ -1,5 +1,7 @@
 package com.geca.alumniCircle.model;
 
+import javax.persistence.Column;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -11,47 +13,21 @@ public class Alumni {
 
     private String firstName;
     private String lastName;
+//    @Column(length = 5000)
     private String about;
     private String email;
     private String mobileNo;
-    private Integer graduationYear;
+    private String graduationYear;
     private String branch;
     private String currentCompany;
     private String password;
     
     @Column(nullable = false)
-    private Boolean verificationStatus = false; // Default value set to false
+    private Boolean active = false; // Default value set to false
 
     private String city;
 
-    @Lob
-    private byte[] photo;
-    
-    
-    
-
-	public Alumni() {
-
-	}
-
-	public Alumni(Long id, String firstName, String lastName, String about, String email, String mobileNo,
-			Integer graduationYear, String branch, String currentCompany, String password, Boolean verificationStatus,
-			String city, byte[] photo) {
-		super();
-		this.id = id;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.about = about;
-		this.email = email;
-		this.mobileNo = mobileNo;
-		this.graduationYear = graduationYear;
-		this.branch = branch;
-		this.currentCompany = currentCompany;
-		this.password = password;
-		this.verificationStatus = verificationStatus;
-		this.city = city;
-		this.photo = photo;
-	}
+    private String photo;
 
 	public Long getId() {
 		return id;
@@ -101,11 +77,11 @@ public class Alumni {
 		this.mobileNo = mobileNo;
 	}
 
-	public Integer getGraduationYear() {
+	public String getGraduationYear() {
 		return graduationYear;
 	}
 
-	public void setGraduationYear(Integer graduationYear) {
+	public void setGraduationYear(String graduationYear) {
 		this.graduationYear = graduationYear;
 	}
 
@@ -133,12 +109,14 @@ public class Alumni {
 		this.password = password;
 	}
 
-	public Boolean getVerificationStatus() {
-		return verificationStatus;
+	
+
+	public Boolean getActive() {
+		return active;
 	}
 
-	public void setVerificationStatus(Boolean verificationStatus) {
-		this.verificationStatus = verificationStatus;
+	public void setActive(Boolean active) {
+		this.active = active;
 	}
 
 	public String getCity() {
@@ -149,17 +127,15 @@ public class Alumni {
 		this.city = city;
 	}
 
-	public byte[] getPhoto() {
+	public String getPhoto() {
 		return photo;
 	}
 
-	public void setPhoto(byte[] photo) {
+	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
     
     
-    
-
     
     
 }
