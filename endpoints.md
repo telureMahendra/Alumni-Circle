@@ -7,36 +7,23 @@
 *   **Sample Request Body**:
     
 
-```code
+```json
 {
-
-"firstName": "mahi",
-
-"lastName": "telure",
-
-"about": "I am a passionate coder",
-
-"email": "test@gmail.com",
-
-"mobileNo": "9561051485",
-
-"graduationYear": "2025",
-
-"branch": "MCA",
-
-"currentCompany": "google",
-
-"position": "software engineer",
-
-"password": "12345678",
-
-"city": "csn",
-
-"photo": "poto.jpg",
-
-"idProof": "id.jpg"
-
+    "firstName": "mahi",
+    "lastName": "telure",
+    "about": "I am a passionate coder",
+    "email": "test@gmail.com",
+    "mobileNo": "9561051485",
+    "graduationYear": "2025",
+    "branch": "MCA",
+    "currentCompany": "google",
+    "position": "software engineer",
+    "password": "12345678",
+    "city": "csn",
+    "photo": "poto.jpg",
+    "idProof": "id.jpg"
 }
+
 
 ```
 
@@ -48,42 +35,26 @@
     
 *   **Sample Request Body**:
     
-```code
+```json
 {
-
-"id": 1,
-
-"firstName": "mahi",
-
-"lastName": "telure",
-
-"about": "I am a passionate coder",
-
-"email": "test@gmail.com",
-
-"mobileNo": "9561051485",
-
-"graduationYear": "2025",
-
-"branch": "MCA",
-
-"currentCompany": "google",
-
-"position": "software engineer",
-
-"password": "12345678",
-
-"active": false,
-
-"city": "csn",
-
-"photo": "poto.jpg",
-
-"idProof": "id.jpg",
-
-"role": "alumni"
-
+    "id": 1,
+    "firstName": "mahi",
+    "lastName": "telure",
+    "about": "I am a passionate coder",
+    "email": "test@gmail.com",
+    "mobileNo": "9561051485",
+    "graduationYear": "2025",
+    "branch": "MCA",
+    "currentCompany": "google",
+    "position": "software engineer",
+    "password": "12345678",
+    "active": false,
+    "city": "csn",
+    "photo": "poto.jpg",
+    "idProof": "id.jpg",
+    "role": "alumni"
 }
+
 ```
 
 ### 3\. **Get All Alumni**
@@ -100,42 +71,26 @@
 *   **Description**: Retrieves details of a specific alumni based on their ID.
     
 
-```code
+```json
 {
-
-"id": 1,
-
-"firstName": "mahi",
-
-"lastName": "telure",
-
-"about": "I am a passionate coder",
-
-"email": "test@gmail.com",
-
-"mobileNo": "9561051485",
-
-"graduationYear": "2025",
-
-"branch": "MCA",
-
-"currentCompany": "google",
-
-"position": "software engineer",
-
-"password": "12345678",
-
-"active": false,
-
-"city": "csn",
-
-"photo": "poto.jpg",
-
-"idProof": "id.jpg",
-
-"role": "alumni"
-
+    "id": 1,
+    "firstName": "mahi",
+    "lastName": "telure",
+    "about": "I am a passionate coder",
+    "email": "test@gmail.com",
+    "mobileNo": "9561051485",
+    "graduationYear": "2025",
+    "branch": "MCA",
+    "currentCompany": "google",
+    "position": "software engineer",
+    "password": "12345678",
+    "active": false,
+    "city": "csn",
+    "photo": "poto.jpg",
+    "idProof": "id.jpg",
+    "role": "alumni"
 }
+
 ```
 
 ### 5\. **Delete Alumni**
