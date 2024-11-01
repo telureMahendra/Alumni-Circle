@@ -18,6 +18,7 @@ public class Student {
 
     private String firstName;
     private String lastName;
+    private String enrollmentNumber;
     @Column(length = 5000)
     private String about;
     private String email;
@@ -32,6 +33,35 @@ public class Student {
     private String city;
 
     private String photo;
+    private String idProof;
+    
+    @Column(nullable = false)
+    private String role = "student";
+
+    
+	public String getEnrollmentNumber() {
+		return enrollmentNumber;
+	}
+
+	public void setEnrollmentNumber(String enrollmentNumber) {
+		this.enrollmentNumber = enrollmentNumber;
+	}
+
+	public String getIdProof() {
+		return idProof;
+	}
+
+	public void setIdProof(String idProof) {
+		this.idProof = idProof;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Long getId() {
 		return id;

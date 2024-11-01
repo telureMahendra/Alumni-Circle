@@ -27,17 +27,22 @@ public class StudentController {
 	StudentService studentService;
 
 	@PostMapping("/register")
-    public ResponseEntity<Student> addAlumni(@RequestBody Student student){
+    public ResponseEntity<Student> addStudent(@RequestBody Student student){
     	return ResponseEntity.ok(this.studentService.addStudent(student));
     }
     
     @PutMapping("/update/{id}")
-    public ResponseEntity<Student> updateAlumni(@RequestBody Student student){
+    public ResponseEntity<Student> updateStudent(@RequestBody Student student){
+    	return ResponseEntity.ok(this.studentService.updateStudent(student));
+    }
+    
+    @PutMapping("/update")
+    public ResponseEntity<Student> updatestudnet1(@RequestBody Student student){
     	return ResponseEntity.ok(this.studentService.updateStudent(student));
     }
     
     @DeleteMapping("delete/{id}")
-	public Student deleteAlumni(@PathVariable("id") Long id) {
+	public Student deletestudent(@PathVariable("id") Long id) {
     	Student student = this.studentService.getStudent(id);
 		this.studentService.deleteStudent(id);	
 		return student;
@@ -57,7 +62,7 @@ public class StudentController {
 //    Request: GET /verified?active=true
 //    Request: GET /verified?active=true
     @GetMapping("/verified")
-    public List<Student> activeAlumni(@RequestParam boolean active) {
+    public List<Student> activeStudent(@RequestParam boolean active) {
     	return active ? studentService.getActiveStudent(active) : studentService.getActiveStudent(active);
     }
     
