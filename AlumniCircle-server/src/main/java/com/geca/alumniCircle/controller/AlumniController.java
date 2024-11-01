@@ -37,6 +37,11 @@ public class AlumniController {
     	return ResponseEntity.ok(this.alumniService.updateAlumni(alumni));
     }
     
+    @PutMapping("/update")
+    public ResponseEntity<Alumni> updateAlumni1(@RequestBody Alumni alumni){
+    	return ResponseEntity.ok(this.alumniService.updateAlumni(alumni));
+    }
+    
     @DeleteMapping("delete/{id}")
 	public Alumni deleteAlumni(@PathVariable("id") Long id) {
     	Alumni alumni = this.alumniService.getAlumni(id);

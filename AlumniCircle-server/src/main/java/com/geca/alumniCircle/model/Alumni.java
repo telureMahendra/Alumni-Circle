@@ -13,21 +13,33 @@ public class Alumni {
 
     private String firstName;
     private String lastName;
-//    @Column(length = 5000)
+    @Column(length = 5000)
     private String about;
     private String email;
     private String mobileNo;
     private String graduationYear;
     private String branch;
     private String currentCompany;
+    private String position;
     private String password;
     
     @Column(nullable = false)
     private Boolean active = false; // Default value set to false
 
     private String city;
-
     private String photo;
+    private String idProof;
+    
+    @Column(nullable = false)
+    private String role = "alumni";
+         
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
 
 	public Long getId() {
 		return id;
@@ -35,6 +47,24 @@ public class Alumni {
 
 	public void setId(Long id) {
 		this.id = id;
+	}
+
+	
+	
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public String getIdProof() {
+		return idProof;
+	}
+
+	public void setIdProof(String idProof) {
+		this.idProof = idProof;
 	}
 
 	public String getFirstName() {
