@@ -1,14 +1,13 @@
 ### 1\. **Register Alumni**
 
-*   **Endpoint**: POST http://localhost:8080/api/alumni/register
+*   **Endpoint**: `POST http://localhost:8080/api/alumni/register`
     
 *   **Description**: Registers a new alumni member with profile details.
     
 *   **Sample Request Body**:
     
 
-\*
-
+```code
 {
 
 "firstName": "mahi",
@@ -39,18 +38,18 @@
 
 }
 
-\*
+```
 
 ### 2\. **Update Alumni Details**
 
-*   **Endpoint**: PUT http://localhost:8080/api/alumni/update/{alumniId}
+*   **Endpoint**: `PUT http://localhost:8080/api/alumni/update/{alumniId}`
     
 *   **Description**: Updates the information of a specific alumni based on their ID.
     
 *   **Sample Request Body**:
     
-
-\*{
+```code
+{
 
 "id": 1,
 
@@ -84,23 +83,25 @@
 
 "role": "alumni"
 
-}\*
+}
+```
 
 ### 3\. **Get All Alumni**
 
-*   **Endpoint**: GET http://localhost:8080/api/alumni/
+*   **Endpoint**: `GET http://localhost:8080/api/alumni/`
     
 *   **Description**: Retrieves a list of all alumni members.
     
 
 ### 4\. **Get Alumni by ID**
 
-*   **Endpoint**: GET http://localhost:8080/api/alumni/{alumniId}
+*   **Endpoint**: `GET http://localhost:8080/api/alumni/{alumniId}`
     
 *   **Description**: Retrieves details of a specific alumni based on their ID.
     
 
-\*{
+```code
+{
 
 "id": 1,
 
@@ -134,24 +135,25 @@
 
 "role": "alumni"
 
-}\*
+}
+```
 
 ### 5\. **Delete Alumni**
 
-*   **Endpoint**: DELETE http://localhost:8080/api/alumni/delete/{alumniId}
+*   **Endpoint**: `DELETE http://localhost:8080/api/alumni/delete/{alumniId}`
     
 *   **Description**: Deletes a specific alumni entry based on their ID.
     
 
 ### 6\. **Get Verified Alumni**
 
-*   **Endpoint**: GET http://localhost:8080/api/alumni/verified?active=true
+*   **Endpoint**: `GET http://localhost:8080/api/alumni/verified?active=true`
     
 *   **Description**: Retrieves a list of verified (active) alumni.
     
 
 ### 7\. **Get Unverified Alumni**
 
-*   **Endpoint**: GET http://localhost:8080/api/alumni/verified?active=false
+*   **Endpoint**: `GET http://localhost:8080/api/alumni/verified?active=false`
     
 *   **Description**: Retrieves a list of unverified (inactive) alumni.
