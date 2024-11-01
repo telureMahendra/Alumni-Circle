@@ -1,22 +1,22 @@
-\# Student API Endpoints
+# Student API Endpoints
 
 The Student API provides endpoints for managing student records, allowing for registration, updating, retrieval, deletion, and filtering of student data.
 
-\## Base URL
+## Base URL
 
-All endpoints are prefixed with: [http://localhost:8080/api/student](http://localhost:8080/api/student)
+All endpoints are prefixed with: `http://localhost:8080/api/student`
 
-\## Endpoints
+## Endpoints
 
-\### 1. Register Student
+### 1. Register Student
 
-\- \*\*Endpoint\*\*: \`POST /register\`
+* **Endpoint**: `POST /register`
 
-\- \*\*Description\*\*: Registers a new student.
+* **Description**: Registers a new student.
 
-\- \*\*Sample Request Body\*\*:
+* **Sample Request Body**:
 
-\`\`\`json
+```json
 
 {
 
