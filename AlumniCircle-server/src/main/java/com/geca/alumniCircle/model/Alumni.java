@@ -32,7 +32,18 @@ public class Alumni {
     
     @Column(nullable = false)
     private String role = "alumni";
+    
+    private String username;
+    
          
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public String getRole() {
 		return role;
 	}

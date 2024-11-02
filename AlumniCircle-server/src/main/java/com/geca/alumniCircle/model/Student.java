@@ -35,10 +35,20 @@ public class Student {
     private String photo;
     private String idProof;
     
+    private String username = email;
+    
     @Column(nullable = false)
     private String role = "student";
 
     
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
 	public String getEnrollmentNumber() {
 		return enrollmentNumber;
 	}

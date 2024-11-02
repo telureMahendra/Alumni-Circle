@@ -27,6 +27,7 @@ public class AlumniService {
 	}
 	
 	public Alumni addAlumni(Alumni alumni) {
+		alumni.setUsername(alumni.getEmail());
 		return alumniRepository.save(alumni);
 	}
 	

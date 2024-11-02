@@ -25,6 +25,7 @@ public class StudentService {
 	}
 	
 	public Student addStudent(Student student) {
+		student.setUsername(student.getEmail());
 		return studentRepository.save(student);
 	}
 
