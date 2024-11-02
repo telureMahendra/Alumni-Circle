@@ -2,7 +2,7 @@ package com.geca.alumniCircle.model;
 
 
 
-import javax.persistence.Column;
+
 
 import jakarta.persistence.*;
 
