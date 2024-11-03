@@ -51,6 +51,12 @@ public class Employer {
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "Employer [id=" + id + ", companyName=" + companyName + ", email=" + email + ", password=" + password
+				+ ", username=" + username + "]";
+	}
+
     
     
 }

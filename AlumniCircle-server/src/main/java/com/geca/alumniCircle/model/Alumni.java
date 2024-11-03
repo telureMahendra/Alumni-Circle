@@ -1,6 +1,6 @@
 package com.geca.alumniCircle.model;
 
-import javax.persistence.Column;
+
 
 import jakarta.persistence.*;
 
@@ -35,7 +35,17 @@ public class Alumni {
     
     private String username;
     
+    
          
+	@Override
+	public String toString() {
+		return "Alumni [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", about=" + about
+				+ ", email=" + email + ", mobileNo=" + mobileNo + ", graduationYear=" + graduationYear + ", branch="
+				+ branch + ", currentCompany=" + currentCompany + ", position=" + position + ", password=" + password
+				+ ", active=" + active + ", city=" + city + ", photo=" + photo + ", idProof=" + idProof + ", role="
+				+ role + ", username=" + username + "]";
+	}
+
 	public String getUsername() {
 		return username;
 	}

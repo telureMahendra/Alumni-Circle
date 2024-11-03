@@ -25,6 +25,13 @@ public class Admin {
     private String photo;
     
     
+    
+
+	@Override
+	public String toString() {
+		return "Admin [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", role=" + role
+				+ ", username=" + username + ", password=" + password + ", photo=" + photo + "]";
+	}
 
 	public String getUsername() {
 		return username;

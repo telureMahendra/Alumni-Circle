@@ -41,6 +41,17 @@ public class Student {
     private String role = "student";
 
     
+    
+    
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", enrollmentNumber="
+				+ enrollmentNumber + ", about=" + about + ", email=" + email + ", mobileNo=" + mobileNo + ", branch="
+				+ branch + ", graduationYear=" + graduationYear + ", password=" + password + ", active=" + active
+				+ ", city=" + city + ", photo=" + photo + ", idProof=" + idProof + ", username=" + username + ", role="
+				+ role + "]";
+	}
+
 	public String getUsername() {
 		return username;
 	}
