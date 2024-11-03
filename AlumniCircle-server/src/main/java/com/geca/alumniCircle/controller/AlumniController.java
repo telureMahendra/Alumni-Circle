@@ -7,14 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.geca.alumniCircle.model.Admin;
 import com.geca.alumniCircle.model.Alumni;
+import com.geca.alumniCircle.model.Login;
 import com.geca.alumniCircle.service.AlumniService;
-
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -24,6 +20,8 @@ public class AlumniController {
 
     @Autowired
     AlumniService alumniService;
+    
+
     
     @PostMapping("/register")
     public ResponseEntity<Alumni> addAlumni(@RequestBody Alumni alumni){

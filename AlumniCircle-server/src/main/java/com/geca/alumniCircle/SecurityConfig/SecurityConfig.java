@@ -15,6 +15,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -22,17 +23,22 @@ public class SecurityConfig {
 
     @Autowired
     private UserDetailsService userDetailsService;
+    
+    @Autowired
+    JwtFilter jwtFilter;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         return http.csrf(customizer -> customizer.disable()).
                 authorizeHttpRequests(request -> request
-                        .requestMatchers("/api/admin/login1", "/api/admin/add").permitAll()
-                        .requestMatchers("/api/admin").permitAll()
+                        .requestMatchers("/api/admin/login", "/api/admin/add").permitAll()
+                        .requestMatchers("/api/alumni/login", "/api/admin").permitAll()
                         .anyRequest().authenticated()).
                 httpBasic(Customizer.withDefaults()).
-                sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).build();
+                sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class)
+                .build();
 
 
     }

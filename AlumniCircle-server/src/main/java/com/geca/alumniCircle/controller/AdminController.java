@@ -26,14 +26,14 @@ public class AdminController {
 	@Autowired
 	AdminService adminService;
 	
-    @PostMapping("/login")
+    @PostMapping("/login11")
     public String login(@RequestBody Login login) {
     	Admin admin = adminService.findByUsername(login.getUsername());
     	System.out.println(adminService.verify(admin));
         return "hey";
     }
 	
-    @PostMapping("/login1")
+    @PostMapping("/login")
     public String login1(@RequestBody Login login) {
         System.out.println("Attempting login for user: " + login.getUsername());
         Admin admin = adminService.findByUsername(login.getUsername());
