@@ -16,8 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.geca.alumniCircle.model.Alumni;
+import com.geca.alumniCircle.model.Login;
 import com.geca.alumniCircle.model.Student;
 import com.geca.alumniCircle.repository.StudentRepository;
+import com.geca.alumniCircle.service.AdminService;
 import com.geca.alumniCircle.service.StudentService;
 
 @RestController
@@ -27,6 +29,15 @@ public class StudentController {
 	
 	@Autowired
 	StudentService studentService;
+	
+	@Autowired
+	AdminService adminService;
+	
+    @PostMapping("/login")
+    public String login1(@RequestBody Login login) {
+    	System.out.println("Student Login URL fetched");
+        return adminService.verify(login.getUsername(), login.getPassword(), "student");
+    }
 
 	@PostMapping("/register")
     public ResponseEntity<Student> addStudent(@RequestBody Student student){

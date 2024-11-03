@@ -33,18 +33,26 @@ public class AdminController {
         return "hey";
     }
 	
+//    working
+//    @PostMapping("/login")
+//    public String login1(@RequestBody Login login) {
+//        System.out.println("Attempting login for user: " + login.getUsername());
+//        Admin admin = adminService.findByUsername(login.getUsername());
+//        if (admin == null) {
+//            System.out.println("User not found.");
+//            return "Invalid username or password"; // Handle the case where the user is not found
+//        }
+//        String result = adminService.verify(admin);
+//        System.out.println("Verification result: " + result);
+//        return result;
+//    }
+    
+    
     @PostMapping("/login")
     public String login1(@RequestBody Login login) {
-        System.out.println("Attempting login for user: " + login.getUsername());
-        Admin admin = adminService.findByUsername(login.getUsername());
-        if (admin == null) {
-            System.out.println("User not found.");
-            return "Invalid username or password"; // Handle the case where the user is not found
-        }
-        String result = adminService.verify(admin);
-        System.out.println("Verification result: " + result);
-        return result;
+        return adminService.verify(login.getUsername(), login.getPassword(), "admin");
     }
+    
     
 	@GetMapping("")
 	public List<Admin> getAdmins() {

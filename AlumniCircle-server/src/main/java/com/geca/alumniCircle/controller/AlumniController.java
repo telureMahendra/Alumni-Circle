@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import com.geca.alumniCircle.model.Admin;
 import com.geca.alumniCircle.model.Alumni;
 import com.geca.alumniCircle.model.Login;
+import com.geca.alumniCircle.service.AdminService;
 import com.geca.alumniCircle.service.AlumniService;
 
 
@@ -21,7 +22,14 @@ public class AlumniController {
     @Autowired
     AlumniService alumniService;
     
+    @Autowired
+    AdminService adminService;
+    
 
+    @PostMapping("/login")
+    public String login1(@RequestBody Login login) {
+        return adminService.verify(login.getUsername(), login.getPassword(), "alumni");
+    }
     
     @PostMapping("/register")
     public ResponseEntity<Alumni> addAlumni(@RequestBody Alumni alumni){

@@ -9,4 +9,6 @@ import com.geca.alumniCircle.model.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 	List<Student> findByActive(boolean b);
+
+	Student findByUsername(String username);
 }
