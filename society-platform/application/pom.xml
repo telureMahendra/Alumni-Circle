@@ -1,0 +1,78 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.society.platform</groupId>
+    <artifactId>society-platform-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../parent-pom/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>society-platform-application</artifactId>
+  <packaging>jar</packaging>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-common</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-security</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-core-user</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-federation</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-society</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-building</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-flat</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-accounting</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-visitor</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-parking</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.society.platform</groupId>
+      <artifactId>society-platform-notification</artifactId>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

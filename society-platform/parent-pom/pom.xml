@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>3.3.4</version>
+    <relativePath />
+  </parent>
+
+  <groupId>com.society.platform</groupId>
+  <artifactId>society-platform-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>../common</module>
+    <module>../security</module>
+    <module>../core-user</module>
+    <module>../federation</module>
+    <module>../society</module>
+    <module>../building</module>
+    <module>../flat</module>
+    <module>../accounting</module>
+    <module>../visitor</module>
+    <module>../parking</module>
+    <module>../notification</module>
+    <module>../application</module>
+  </modules>
+
+  <properties>
+    <java.version>17</java.version>
+  </properties>
+</project>
